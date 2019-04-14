@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Bangers"
+      rel="stylesheet"
+    />
+    <link href="../../styles/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>Vue.js training - Session 1</h1>
+
+    <div id="app">
+      <div class="hero">
+        <div class="hero-image">
+          <img :src="image" :title="name" />
+        </div>
+
+        <div class="hero-info">
+          <h2>{{ name }}</h2>
+          <!--
+          <button v-on:click="showDescription = !showDescription">
+            Toggle bio
+          </button>
+          -->
+          <!--
+          <button v-on:click="toggleBio">
+            Toggle bio
+          </button>
+          -->
+          <button @click="toggleBio">
+            Toggle bio
+          </button>
+          <p v-if="showDescription">{{ description }}</p>
+          <ul v-else>
+            <li v-for="(detail, key) in appearance">
+              {{ key }} : {{ detail }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-films">
+          <ul>
+            <li v-for="film in films">{{ film }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

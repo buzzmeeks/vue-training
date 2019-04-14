@@ -1,0 +1,86 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Bangers', cursive;
+  background-color: white;
+  font-size: 2em;
+}
+h1,
+h2 {
+  font-weight: normal;
+}
+
+h2 {
+  margin: 0;
+}
+
+img {
+  border: 1px solid #d8d8d8;
+  width: 95%;
+  box-shadow: 0px 0.5px 1px #d8d8d8;
+}
+
+.hero {
+  display: flex;
+  flex-flow: wrap;
+  padding: 1rem;
+}
+
+.is-hero {
+  border: 2px dashed burlywood;
+  background-color: lavenderblush;
+}
+
+.is-villain {
+  border: 2px dashed burlywood;
+  background-color: firebrick;
+}
+
+.hero-image {
+  width: 30%;
+}
+
+.hero-info {
+  width: 40%;
+}
+
+.hero-info button {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.hero-info p {
+  font-size: 25px;
+}
+
+.hero-films {
+  width: 30%;
+  font-size: 25px;
+}
+
+.toggle-desc {
+  position: relative;
+  bottom: 0;
+  right: 0;
+}
+
+.hero-title {
+  font-size: 45px;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.hero-name {
+  margin-right: 15px;
+}
+
+.hero-color {
+  width: 35px;
+  height: 35px;
+  margin-left: 5px;
+  margin-top: 6px;
+  box-shadow: 0px 0.5px 1px #d8d8d8;
+  border: 1px solid #d8d8d8;
+}

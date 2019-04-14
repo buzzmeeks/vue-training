@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Bangers"
+      rel="stylesheet"
+    />
+    <link href="../../styles/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>Vue.js training - Session 1</h1>
+
+    <div id="app">
+      <div class="hero">
+        <div class="hero-image">
+          <img :src="image" :title="name" />
+        </div>
+
+        <div class="hero-info">
+          <h2>{{ name }}</h2>
+          <p v-if="showDescription">{{ description }}</p>
+          <p v-else>No description</p>
+          <p v-show="showDescription">{{ description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
