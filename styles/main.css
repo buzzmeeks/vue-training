@@ -26,16 +26,16 @@ img {
   display: flex;
   flex-flow: wrap;
   padding: 1rem;
+  border: 2px solid black;
+  margin-bottom: 10px;
 }
 
 .is-hero {
-  border: 2px dashed burlywood;
-  background-color: lavenderblush;
+  background-color: antiquewhite;
 }
 
 .is-villain {
-  border: 2px dashed burlywood;
-  background-color: firebrick;
+  background-color: slategrey;
 }
 
 .hero-image {
