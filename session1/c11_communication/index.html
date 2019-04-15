@@ -18,11 +18,11 @@
 
     <div id="app">
       <div>I like {{ favourites }} heroes !</div>
-      <hero
+      <hero-component
         v-for="hero in heroes"
         :hero="hero"
         @hero-like="addToFavourites"
-      ></hero>
+      ></hero-component>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

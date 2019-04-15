@@ -1,71 +1,4 @@
-Vue.component('hero-info', {
-  props: {
-    name: {
-      type: String,
-      required: true
-    },
-    realName: {
-      type: String,
-      required: true
-    },
-    colors: {
-      type: Array,
-      required: true
-    },
-    description: {
-      type: String,
-      required: true
-    },
-    appearance: {
-      type: Object,
-      required: true
-    }
-  },
-  template: `
-  <div class="hero-info">
-    <div class="hero-title">
-      <div class="hero-name">{{ name }}</div>
-      <div
-        v-for="color in colors"
-        class="hero-color"
-        :style="{ backgroundColor: color }"
-      ></div>
-    </div>
-
-    <div class="real-name">
-      ({{ realName }}) 
-    </div>
-
-    <button @click="toggleBio">
-      Toggle bio
-    </button>
-    <p v-if="showDescription">{{ description }}</p>
-    <ul v-else>
-      <li v-for="(detail, key) in appearance">
-        {{ key }} : {{ detail }}
-      </li>
-    </ul>
-  </div>
-  `,
-  data() {
-    return {
-      showDescription: false
-    }
-  },
-  methods: {
-    toggleBio() {
-      this.showDescription = !this.showDescription
-    }
-  }
-})
-
-Vue.component('hero', {
-  props: {
-    hero: {
-      type: Object,
-      required: true
-    }
-  },
+Vue.component('hero-component', {
   template: `
     <div class="hero" :class="{'is-hero': !hero.villain, 'is-villain': hero.villain}">
       <div class="hero-image">
@@ -75,13 +8,28 @@ Vue.component('hero', {
         <img :src="hero.image" :title="hero.name" />
       </div>
 
-      <hero-info 
-        :name="hero.name"
-        :realName="realName"
-        :colors="hero.colors"
-        :description="hero.description"
-        :appearance="hero.appearance">
-      </hero-info>
+      <div class="hero-info">
+        <div class="hero-title">
+          <div class="hero-name">{{ hero.name }}</div>
+          <div
+            v-for="color in hero.colors"
+            class="hero-color"
+            :style="{ backgroundColor: color }"
+          ></div>
+        </div>
+
+        <div class="real-name">({{ realName }})</div>
+
+        <button @click="toggleBio">
+          Toggle bio
+        </button>
+        <p v-if="showDescription">{{ hero.description }}</p>
+        <ul v-else>
+          <li v-for="(detail, key) in hero.appearance">
+            {{ key }} : {{ detail }}
+          </li>
+        </ul>
+      </div>
 
       <div class="hero-films">
         <ul>
@@ -89,15 +37,27 @@ Vue.component('hero', {
         </ul>
       </div>
     </div>`,
+  props: {
+    hero: {
+      type: Object,
+      required: true
+    }
+  },
   data() {
-    return { liked: false }
+    return {
+      showDescription: false,
+      liked: false
+    }
   },
   computed: {
     realName() {
-      return `${this.hero.firstName} ${this.hero.lastName}`
+      return `${this.firstName} ${this.lastName}`
     }
   },
   methods: {
+    toggleBio() {
+      this.showDescription = !this.showDescription
+    },
     like() {
       this.liked = !this.liked
       this.$emit('hero-like', this.liked)

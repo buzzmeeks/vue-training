@@ -11,12 +11,7 @@
     <h1>Vue.js training - Session 1</h1>
 
     <div id="app">
-      <hero></hero>
-      <hero></hero>
-      <hero></hero>
-      <hero></hero>
-      <hero></hero>
-      <hero></hero>
+      <hero-component v-for="hero in heroes" :hero="hero"></hero-component>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

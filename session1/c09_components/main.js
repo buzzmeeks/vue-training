@@ -1,4 +1,4 @@
-Vue.component('hero', {
+Vue.component('hero-component', {
   template: `
     <div class="hero" :class="{'is-hero': !villain, 'is-villain': villain}">
       <div class="hero-image">
