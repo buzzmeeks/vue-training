@@ -1,0 +1,10 @@
+#app {
+  display: flex;
+}
+
+.box {
+  padding: 1rem;
+  border: 1px solid black;
+  margin: 1rem;
+  flex: 1;
+}
