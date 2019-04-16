@@ -25,6 +25,6 @@ const app = new Vue({
   el: '#app',
   data: {
     // Trust me here, data/pokemons.js is now available on data, we will talk about this synthax later
-    pokemons: { ...pokemons }
+    pokemons: [...pokemons]
   }
 })
