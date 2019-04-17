@@ -7,8 +7,12 @@
 
   <body>
     <div id="app">
-      <pokemons-box></pokemons-box>
-      <pokemons-belt></pokemons-belt>
+      <pokemons-box
+        :pokemons="pokemons"
+        @bring="putInBelt"
+        :can-bring-more="!isBeltFull"
+      ></pokemons-box>
+      <pokemons-belt :favorites="belt" @back="removeFromBelt"></pokemons-belt>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
