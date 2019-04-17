@@ -21,7 +21,7 @@ Vue.component('pokemons-box', {
     <ul class="pokemons-list">
       <li v-for="p in pokemons" :key="p.id" class="pokemons-list-item">
         <pokemon-component :pokemon="p"></pokemon-component>
-        <button class="pokemon-list-item-action" @click="bring(p.id)" :disabled="!canBringMore">Emmener</button>
+        <button class="pokemon-list-item-action" @click="bring(p.id)" :disabled="!canBringMore"><i class="fas fa-angle-right"></i></button>
       </li>
     </ul>
   </div>
@@ -43,7 +43,7 @@ Vue.component('pokemons-belt', {
     <ul class="pokemons-list">
       <li v-for="p in favorites" :key="p.id" class="pokemons-list-item">
         <pokemon-component :pokemon="p"></pokemon-component>
-        <button class="pokemon-list-item-action" @click="back(p.id)">Rentrer à la maison</button>
+        <button class="pokemon-list-item-action" @click="back(p.id)"><i class="fas fa-angle-left"></i></button>
       </li>
     </ul>
   </div>

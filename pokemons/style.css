@@ -1,6 +1,15 @@
+@font-face {
+  font-family: 'Pokemon Fire Red Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Pokemon Fire Red Regular'),
+    url('./fonts/pokemon-normal.woff2') format('woff2');
+}
+
 #app {
   display: flex;
   align-items: flex-start;
+  font-family: 'Indie Flower', cursive;
 }
 
 .box {
@@ -22,8 +31,9 @@
 }
 
 .pokemon-name {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
+  font-family: 'Pokemon Fire Red Regular';
 }
 
 .pokemons-list {
@@ -60,14 +70,17 @@
 }
 
 .pokemon-type {
-  border-radius: 3rem;
+  border-radius: 10px;
   color: white;
-  box-shadow: 0.2rem 0.2rem 0.2rem black;
+  box-shadow: 2px 2px 2px lightgrey;
   text-transform: capitalize;
   padding: 0.5rem;
   text-align: center;
-  min-width: 100px;
+  min-width: 70px;
+  font-family: 'Pokemon Fire Red Regular';
+  font-size: 8px;
 }
+
 .pokemon-type.bug {
   background-color: #a8b820;
 }
