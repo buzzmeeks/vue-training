@@ -1,7 +1,13 @@
 <template>
   <div class="home">
-    <Box :pokemons="pokemons" @bring="putInBelt" :can-bring-more="!isBeltFull"></Box>
-    <Belt :favorites="belt" @back="removeFromBelt"></Belt>
+    <Box
+      :pokemons="pokemons"
+      @bring="putInBelt"
+      :can-bring-more="!isBeltFull"
+      @show-type="showType"
+    ></Box>
+    <Belt :favorites="belt" @back="removeFromBelt" @show-type="showType"></Belt>
+    <TypeInformation :type="typeInformation"></TypeInformation>
   </div>
 </template>
 
@@ -9,16 +15,19 @@
 import { pokemons } from '@/assets/data/pokemons';
 import Box from '@/components/Box';
 import Belt from '@/components/Belt';
+import TypeInformation from '@/components/TypeInformation';
 
 export default {
   name: 'home',
   components: {
     Belt,
     Box,
+    TypeInformation
   },
   data: () => ({
     belt: [],
     pokemons: [...pokemons],
+    typeInformation: null,
   }),
   methods: {
     putInBelt(pokemonId) {
@@ -30,6 +39,11 @@ export default {
       const pokemon = this.belt.find(pokemon => pokemon.id === pokemonId);
       this.pokemons.push(pokemon);
       this.belt = this.belt.filter(pokemon => pokemon.id !== pokemonId);
+    },
+    showType(typeName) {
+      this.typeInformation = {
+        name: typeName,
+      };
     },
   },
   computed: {
