@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import { pokemons } from '@/assets/data/pokemons';
 import Box from '@/components/Box';
 import Belt from '@/components/Belt';
@@ -22,7 +23,7 @@ export default {
   components: {
     Belt,
     Box,
-    TypeInformation
+    TypeInformation,
   },
   data: () => ({
     belt: [],
@@ -40,9 +41,11 @@ export default {
       this.pokemons.push(pokemon);
       this.belt = this.belt.filter(pokemon => pokemon.id !== pokemonId);
     },
-    showType(typeName) {
+    async showType(typeName) {
+      const info = await axios.get(`https://pokeapi.co/api/v2/type/${typeName}`);
       this.typeInformation = {
         name: typeName,
+        data: info.data.damage_relations,
       };
     },
   },
