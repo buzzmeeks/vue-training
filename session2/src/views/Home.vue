@@ -1,13 +1,7 @@
 <template>
   <div class="home">
-    <Box
-      :pokemons="pokemons"
-      @bring="putInBelt"
-      :can-bring-more="!isBeltFull"
-      @show-type="showType"
-    ></Box>
-    <Belt :favorites="belt" @back="removeFromBelt" @show-type="showType"></Belt>
-    <TypeInformation :type="typeInformation"></TypeInformation>
+    <Box :pokemons="pokemons" @bring="putInBelt" :can-bring-more="!isBeltFull"></Box>
+    <Belt :favorites="belt" @back="removeFromBelt"></Belt>
   </div>
 </template>
 
@@ -16,14 +10,12 @@ import axios from 'axios';
 import { pokemons } from '@/assets/data/pokemons';
 import Box from '@/components/Box';
 import Belt from '@/components/Belt';
-import TypeInformation from '@/components/TypeInformation';
 
 export default {
   name: 'home',
   components: {
     Belt,
     Box,
-    TypeInformation,
   },
   data: () => ({
     belt: [],
@@ -41,13 +33,6 @@ export default {
       this.pokemons.push(pokemon);
       this.belt = this.belt.filter(pokemon => pokemon.id !== pokemonId);
     },
-    async showType(typeName) {
-      const info = await axios.get(`https://pokeapi.co/api/v2/type/${typeName}`);
-      this.typeInformation = {
-        name: typeName,
-        data: info.data.damage_relations,
-      };
-    },
   },
   computed: {
     isBeltFull() {
@@ -61,7 +46,6 @@ export default {
 .home {
   display: flex;
   align-items: flex-start;
-  font-family: 'Indie Flower', cursive;
   .box {
     padding: 1rem;
     border: 1px solid black;

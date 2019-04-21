@@ -24,6 +24,10 @@ export default {
   src: local('Pokemon Fire Red Regular'), url('./assets/fonts/pokemon-normal.woff2') format('woff2');
 }
 
+body {
+  font-family: 'Indie Flower', cursive;
+}
+
 .pokemons-list {
   padding: 0;
   &-item {

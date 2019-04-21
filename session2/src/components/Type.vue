@@ -1,5 +1,5 @@
 <template>
-  <div class="pokemon-type" :class="name">{{ name }}</div>
+  <router-link :to="link" class="pokemon-type" :class="name">{{ name }}</router-link>
 </template>
 
 <script>
@@ -7,11 +7,17 @@ export default {
   props: {
     name: { type: String, requuired: true },
   },
+  computed: {
+    link() {
+      return `/type/${this.name}`;
+    },
+  },
 };
 </script>
 
 <style lang="scss">
 .pokemon-type {
+  display: block;
   border-radius: 10px;
   color: white;
   box-shadow: 2px 2px 2px lightgrey;

@@ -4,12 +4,7 @@
     <div>
       <div class="pokemon-name">{{ pokemon.name }}</div>
       <ul class="pokemon-types-list">
-        <li
-          v-for="type in pokemon.types"
-          :key="type"
-          class="pokemon-types-list-item"
-          @click="onTypeClicked(type)"
-        >
+        <li v-for="type in pokemon.types" :key="type" class="pokemon-types-list-item">
           <Type :name="type"></Type>
         </li>
       </ul>
