@@ -3,12 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <link href="./style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
     <div id="app">
-      <pokemons-box></pokemons-box>
-      <pokemons-belt></pokemons-belt>
+      <pokemons-box
+        :pokemons="pokemons"
+        @bring="putInBelt"
+        :can-bring-more="!isBeltFull"
+      ></pokemons-box>
+      <pokemons-belt :favorites="belt" @back="removeFromBelt"></pokemons-belt>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
