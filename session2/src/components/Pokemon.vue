@@ -1,6 +1,6 @@
 <template>
   <div class="pokemon">
-    <img :src="pokemon.image">
+    <img :src="pokemon.image" @click="onImageClicked">
     <div>
       <div class="pokemon-name">{{ pokemon.name }}</div>
       <ul class="pokemon-types-list">
@@ -25,6 +25,9 @@ export default {
   methods: {
     onTypeClicked(name) {
       this.$emit('show-type', name);
+    },
+    onImageClicked() {
+      this.$store.dispatch('zoom', this.pokemon.id);
     },
   },
 };

@@ -2,7 +2,7 @@
   <div class="zoom box">
     <h1>{{pokemon ? pokemon.name : 'Zoom'}}</h1>
     <div class="content" v-if="pokemon">
-      <img :src="image">
+      <img :src="image" @click="onImageClicked">
       <div class="info">
         <div>Couleur: {{pokemon.color}}</div>
         <div>Forme: {{pokemon.shape}}</div>
