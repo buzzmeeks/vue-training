@@ -18,13 +18,17 @@ export default {
   components: {
     Pokemon,
   },
-  props: {
-    pokemons: { type: Array, required: true },
-    canBringMore: { type: Boolean, required: true },
-  },
   methods: {
     bring(pokemonId) {
-      this.$emit('bring', pokemonId);
+      this.$store.commit('putInBelt', pokemonId);
+    },
+  },
+  computed: {
+    canBringMore() {
+      return !this.$store.getters.isBeltFull;
+    },
+    pokemons() {
+      return this.$store.state.pokemons;
     },
   },
 };

@@ -10,6 +10,23 @@ const store = new Vuex.Store({
     pokemons: [...pokemons],
     belt: [],
   },
+  mutations: {
+    putInBelt(state, pokemonId) {
+      const pokemon = state.pokemons.find(pokemon => pokemon.id === pokemonId);
+      state.belt.push(pokemon);
+      state.pokemons = state.pokemons.filter(pokemon => pokemon.id !== pokemonId);
+    },
+    removeFromBelt(state, pokemonId) {
+      const pokemon = state.belt.find(pokemon => pokemon.id === pokemonId);
+      state.pokemons.push(pokemon);
+      state.belt = state.belt.filter(pokemon => pokemon.id !== pokemonId);
+    },
+  },
+  getters: {
+    isBeltFull(state) {
+      return state.belt.length >= 6;
+    },
+  },
 });
 
 export default store;
