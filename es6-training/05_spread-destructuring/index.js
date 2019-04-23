@@ -9,9 +9,13 @@ function sum(x, y, z) {
   return x + y + z
 }
 const myArray = [2, 7, 14]
+
+sum(myArray[0], myArray[1], myArray[2])
 sum(...myArray)
 
 // myOtherArray = [3, 2, 7, 14, 18, 24]
+
+const myOtherArray = [3, myArray[0], myArray[1], myArray[2], 18, 24]
 const myOtherArray = [3, ...myArray, 18, 24]
 
 // new is ES2018, spread can be applied to object
@@ -25,25 +29,26 @@ const myOtherObject = {
   ...myObject,
   d: 6
 }
-// useful to copy an obect
+// useful to copy an object
 const myCopy = { ...myOjbect }
 
 // By destructuring we can unpack values from array or object
 // and assign them directly to variables
-const myArray = [10, 20, 30]
+const myArray = [10, 'i', 30]
 const [a, b, c] = myArray
 // a = 10
-// b = 20
+// b = 'i'
 // c = 30
 
 // A value by default can be given
 const [a, b, c, d = 4] = myArray
 
 // spread operator can be used to destructure everything else
-const [first, second, ...others] = [3, 6, 9, 10, 7, 14]
+const [first, second, ...hyenas] = [3, 6, 9, 10, 7, 14]
 // first = 3
 // second = 6
-// others = [9, 10, 7, 14]
+// hyenas = [9, 10, 7, 14]
+
 
 // Object destructuring
 const obj1 = {
@@ -59,3 +64,12 @@ console.log(cetteVariable) // 5
 // With a default value
 const { prop1: cetteVariable = 7 } = obj1
 console.log(cetteVariable) // 5
+
+
+const student = {
+  name: 'Jean',
+  lastname: 'Truc',
+  note: 
+  zkejr:
+  lzer:
+}

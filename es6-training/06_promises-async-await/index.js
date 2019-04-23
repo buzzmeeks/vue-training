@@ -67,3 +67,22 @@ myPromise
   .then(function(result3) {
     console.log(result3) // should print 'another promise' after 6 sec
   })
+
+// a promise can be chained with a .catch() to catch any rejection
+// .catch take a function as a parameter
+// this function takes whatever is rejected in the promise, usually an error
+const myPromise = new Promise(function(resolve, reject) {
+  // Let's resolve this promise in 5 sec.
+  setTimeout(function() {
+    reject(new Error())
+  }, 5000)
+})
+
+myPromise
+  .then(function(result) {
+    console.log(result)
+  })
+  .catch(function(err) {
+    console.log(err)
+    console.log('SOMETHING WENT WRONG')
+  })

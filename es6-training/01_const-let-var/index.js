@@ -6,7 +6,7 @@
 // -----------------------------------------------------------------
 // const
 // - cannot be assigned again
-// - arrays and objets are still mutable
+// - arrays and objects are still mutable
 // - making it the prefered way to declare variables
 // -----------------------------------------------------------------
 
@@ -24,6 +24,7 @@ myArray.push(14)
 
 // this will throw an error
 myArray = [4, 5]
+myArray = 'abc'
 
 const myObject = {
   prop1: 'a',
@@ -50,6 +51,7 @@ let number = 8
 // this is ok
 number = 10
 
+//
 if (true) {
   let toto = 3
 }

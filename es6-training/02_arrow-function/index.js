@@ -24,7 +24,7 @@ const maFonction = (x, y) => {
 
 // when there is only one argument, parentheses are not needed
 const maFonction = function(a) {
-  const sum = x + 2
+  const sum = a + 2
   return sum
 }
 // is equivalent to

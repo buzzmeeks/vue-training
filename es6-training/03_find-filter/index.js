@@ -52,12 +52,12 @@ const student = students.find(student => student.name === 'Varys')
 const elements = array.filter(condition)
 
 // To find all students with grade above 10
-const studentsAbove10 = array.filter(function(student) {
-  return student.grade > 10
+const studentsAbove10 = students.filter(function(student) {
+  return student.score > 10
 })
 // is equivalent to
-const students = array.filter(student => {
-  return student.grade > 10
+const studentsAbove10 = students.filter(student => {
+  return student.score > 10
 })
 // is equivalent to
-const students = array.filter(student => student.grade > 10)
+const studentsAbove10 = students.filter(student => student.score > 10)

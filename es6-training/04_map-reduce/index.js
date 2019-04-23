@@ -32,20 +32,20 @@ const newArray = myArray.map(functionToApply)
 const studentsBool = students.map(function(student) {
   return {
     name: student.name,
-    pass: student.grade >= 10
+    pass: student.score >= 10
   }
 })
 // is equivalent to
 const studentsBool = students.map(student => {
   return {
     name: student.name,
-    pass: student.grade >= 10
+    pass: student.score >= 10
   }
 })
 // is equivalent to
 const studentsBool = students.map(student => ({
   name: student.name,
-  pass: student.grade >= 10
+  pass: student.score >= 10
 }))
 
 // -----------------------------------------------------------------
