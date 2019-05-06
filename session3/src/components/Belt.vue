@@ -26,12 +26,14 @@ export default {
     Pokemon,
     DecoratedBox,
   },
-  props: {
-    favorites: { type: Array, required: true },
-  },
   methods: {
     back(pokemonId) {
-      this.$emit('back', pokemonId);
+      this.$store.commit('removeFromBelt', pokemonId);
+    },
+  },
+  computed: {
+    favorites() {
+      return this.$store.state.belt;
     },
   },
 };
