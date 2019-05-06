@@ -1,6 +1,8 @@
 <template>
-  <div class="box">
-    <h1>Tous mes pokémons</h1>
+  <DecoratedBox>
+    <template #header>
+      <h2>Tous mes pokémons</h2>
+    </template>
     <ul class="pokemons-list">
       <li v-for="p in pokemons" :key="p.id" class="pokemons-list-item">
         <Pokemon :pokemon="p"></Pokemon>
@@ -9,14 +11,16 @@
         </button>
       </li>
     </ul>
-  </div>
+  </DecoratedBox>
 </template>
 
 <script>
 import Pokemon from './Pokemon';
+import DecoratedBox from './DecoratedBox';
 export default {
   components: {
     Pokemon,
+    DecoratedBox,
   },
   props: {
     pokemons: { type: Array, required: true },

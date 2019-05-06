@@ -47,11 +47,8 @@ export default {
   display: flex;
   align-items: flex-start;
   .box {
-    padding: 1rem;
-    border: 1px solid black;
     margin: 1rem;
     flex: 1;
-    background: white;
   }
 }
 </style>
