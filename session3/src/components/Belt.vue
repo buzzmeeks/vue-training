@@ -9,7 +9,7 @@
     <ul class="pokemons-list">
       <li v-for="p in favorites" :key="p.id" class="pokemons-list-item">
         <Pokemon :pokemon="p"></Pokemon>
-        <button class="pokemon-list-item-action" @click="back(p.id)">
+        <button class="pokemon-list-item-action" @click="back(p.id)" :disabled="disabledBack">
           <i class="fas fa-angle-left"></i>
         </button>
       </li>
@@ -34,6 +34,12 @@ export default {
   computed: {
     favorites() {
       return this.$store.state.belt;
+    },
+    disabledBack() {
+      return (
+        this.$store.getters.isFighting ||
+        (this.$store.getters.isOnHighGrass && this.favorites.length < 2)
+      );
     },
   },
 };

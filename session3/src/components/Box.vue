@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     canBringMore() {
-      return !this.$store.getters.isBeltFull;
+      return !this.$store.getters.isBeltFull && !this.$store.getters.isFighting;
     },
     pokemons() {
       return this.$store.state.pokemons;

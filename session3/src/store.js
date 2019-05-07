@@ -50,6 +50,13 @@ const store = new Vuex.Store({
     isBeltFull(state) {
       return state.belt.length >= 6;
     },
+    isFighting(state) {
+      return Boolean(state.outside.fight.wild);
+    },
+    isOnHighGrass(state) {
+      const { x, y } = state.outside.position;
+      return state.outside.map[y][x].type === 'high-grass';
+    },
   },
   actions: {
     async getPokemons({ commit }) {
