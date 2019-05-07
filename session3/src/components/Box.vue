@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     bring(pokemonId) {
-      this.$store.commit('putInBelt', pokemonId);
+      this.$store.dispatch('putInBelt', pokemonId);
     },
   },
   computed: {

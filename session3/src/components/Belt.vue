@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     back(pokemonId) {
-      this.$store.commit('removeFromBelt', pokemonId);
+      this.$store.dispatch('removeFromBelt', pokemonId);
     },
   },
   computed: {

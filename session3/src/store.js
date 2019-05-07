@@ -1,24 +1,20 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { pokemons } from '@/assets/data/pokemons';
+import axios from 'axios';
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    pokemons: [...pokemons],
+    pokemons: [],
     belt: [],
   },
   mutations: {
-    putInBelt(state, pokemonId) {
-      const pokemon = state.pokemons.find(pokemon => pokemon.id === pokemonId);
-      state.belt.push(pokemon);
-      state.pokemons = state.pokemons.filter(pokemon => pokemon.id !== pokemonId);
+    setBelt(state, belt) {
+      state.belt = belt;
     },
-    removeFromBelt(state, pokemonId) {
-      const pokemon = state.belt.find(pokemon => pokemon.id === pokemonId);
-      state.pokemons.push(pokemon);
-      state.belt = state.belt.filter(pokemon => pokemon.id !== pokemonId);
+    setPokemons(state, pokemons) {
+      state.pokemons = pokemons;
     },
   },
   getters: {
@@ -33,6 +29,16 @@ const store = new Vuex.Store({
 
       const { data: belt } = await axios.get('/api/belt');
       commit('setBelt', belt);
+    },
+
+    async putInBelt({ dispatch }, id) {
+      await axios.post(`/api/pokemons/${id}/move/`);
+      await dispatch('getPokemons');
+    },
+
+    async removeFromBelt({ dispatch }, id) {
+      await axios.post(`/api/belt/${id}/move/`);
+      await dispatch('getPokemons');
     },
   },
 });
