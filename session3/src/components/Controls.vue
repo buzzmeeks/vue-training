@@ -2,10 +2,10 @@
   <div class="controls">
     <div class="main">
       <div class="joystick">
-        <button class="joystick_button up"></button>
-        <button class="joystick_button down"></button>
-        <button class="joystick_button left"></button>
-        <button class="joystick_button right"></button>
+        <button @click="moveUp" class="joystick_button up"></button>
+        <button @click="moveDown" class="joystick_button down"></button>
+        <button @click="moveLeft" class="joystick_button left"></button>
+        <button @click="moveRight" class="joystick_button right"></button>
       </div>
       <div class="actions">
         <button class="actions_button a">A</button>
@@ -13,14 +13,29 @@
       </div>
     </div>
     <div class="secondary">
-      <button class="secondary_button">Start</button>
-      <button class="secondary_button">Select</button>
+      <router-link to="/" class="secondary_button">Start</router-link>
+      <router-link to="/detail" class="secondary_button">Select</router-link>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    moveUp() {
+      this.$store.dispatch('moveUp');
+    },
+    moveDown() {
+      this.$store.dispatch('moveDown');
+    },
+    moveRight() {
+      this.$store.dispatch('moveRight');
+    },
+    moveLeft() {
+      this.$store.dispatch('moveLeft');
+    },
+  },
+};
 </script>
 
 <style lang="scss">

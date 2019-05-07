@@ -3,6 +3,7 @@
     <nav id="mainNav">
       <router-link to="/" exact>Homepage</router-link>
       <router-link to="/detail">Pokédex</router-link>
+      <router-link to="/outside">Aventure</router-link>
     </nav>
     <div class="content">
       <router-view></router-view>

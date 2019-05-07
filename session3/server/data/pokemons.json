@@ -1,69 +1,89 @@
 {
-  "pokemons": [
-    {
-      "id": 25,
-      "name": "Pikachu",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
-      "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
-      "types": ["electric"]
-    },
-    {
-      "id": 1,
-      "name": "Bulbizarre",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-      "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
-      "types": ["poison", "grass"]
-    },
-    {
-      "id": 134,
-      "name": "Aquali",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png",
-      "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/134.png",
-      "types": ["water"]
-    },
-    {
-      "id": 129,
-      "name": "Magicarpe",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
-      "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/129.png",
-      "types": ["water"]
-    },
-    {
-      "id": 38,
-      "name": "Feunard",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png",
-      "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/38.png",
-      "types": ["fire"]
-    },
-    {
-      "id": 131,
-      "name": "Lokhlass",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png",
-      "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/131.png",
-      "types": ["ice", "water"]
-    },
-    {
-      "id": 4,
-      "name": "Salamèche",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-      "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png",
-      "types": ["fire"]
-    },
-    {
-      "id": 7,
-      "name": "Carapuce",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
-      "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/back/pokemon/7.png",
-      "types": ["water"]
-    }
-  ],
-  "belt": [
-    {
-      "id": 77,
-      "name": "Ponyta",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
-      "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/77.png",
-      "types": ["fire"]
-    }
-  ]
+    "pokemons": [
+        {
+            "id": 131,
+            "name": "Lokhlass",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/131.png",
+            "types": [
+                "ice",
+                "water"
+            ]
+        },
+        {
+            "id": 77,
+            "name": "Ponyta",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/77.png",
+            "types": [
+                "fire"
+            ]
+        },
+        {
+            "id": 25,
+            "name": "Pikachu",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
+            "types": [
+                "electric"
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Bulbizarre",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
+            "types": [
+                "poison",
+                "grass"
+            ]
+        },
+        {
+            "id": 134,
+            "name": "Aquali",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/134.png",
+            "types": [
+                "water"
+            ]
+        }
+    ],
+    "belt": [
+        {
+            "id": 129,
+            "name": "Magicarpe",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/129.png",
+            "types": [
+                "water"
+            ]
+        },
+        {
+            "id": 38,
+            "name": "Feunard",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/38.png",
+            "types": [
+                "fire"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Salamèche",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png",
+            "types": [
+                "fire"
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Carapuce",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/back/pokemon/7.png",
+            "types": [
+                "water"
+            ]
+        }
+    ]
 }
