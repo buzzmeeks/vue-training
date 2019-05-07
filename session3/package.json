@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
+    "node-json-db": "^0.11.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
@@ -28,5 +29,19 @@
     "prettier": "^1.17.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.21"
+  },
+  "vue": {
+    "devServer": {
+      "proxy": {
+        "/api": {
+          "target": "http://localhost:3000",
+          "pathRewrite": {
+            "^/api": ""
+          },
+          "ws": true,
+          "changeOrigin": true
+        }
+      }
+    }
   }
 }

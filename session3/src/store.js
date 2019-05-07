@@ -26,6 +26,15 @@ const store = new Vuex.Store({
       return state.belt.length >= 6;
     },
   },
+  actions: {
+    async getPokemons({ commit }) {
+      const { data: pokemons } = await axios.get('/api/pokemons');
+      commit('setPokemons', pokemons);
+
+      const { data: belt } = await axios.get('/api/belt');
+      commit('setBelt', belt);
+    },
+  },
 });
 
 export default store;
