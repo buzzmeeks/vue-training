@@ -9,6 +9,7 @@ export async function fetchPokemon(id) {
     id: data.id,
     name: data.names.find(({ language }) => language.name === 'fr').name,
     image: data.sprites.front_default,
+    imageBack: data.sprites.back_default,
     types: data.types.map(({ type }) => type.name),
   };
 }

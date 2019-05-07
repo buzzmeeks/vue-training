@@ -16,6 +16,11 @@ app.post('/pokemons', function(req, res) {
   db.push('/pokemons[]', pokemon, true);
 });
 
+app.post('/belt', function(req, res) {
+  const pokemon = req.body;
+  db.push('/belt[]', pokemon, true);
+});
+
 app.post('/pokemons/:id/move', function(req, res) {
   const pokemonId = Number(req.params.id);
   let pokemons = db.getData('/pokemons') || [];
