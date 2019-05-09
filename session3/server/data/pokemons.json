@@ -1,24 +1,6 @@
 {
     "pokemons": [
         {
-            "id": 77,
-            "name": "Ponyta",
-            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
-            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/77.png",
-            "types": [
-                "fire"
-            ]
-        },
-        {
-            "id": 25,
-            "name": "Pikachu",
-            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
-            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
-            "types": [
-                "electric"
-            ]
-        },
-        {
             "id": 1,
             "name": "Bulbizarre",
             "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
@@ -47,15 +29,6 @@
             ]
         },
         {
-            "id": 4,
-            "name": "Salamèche",
-            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png",
-            "types": [
-                "fire"
-            ]
-        },
-        {
             "id": 7,
             "name": "Carapuce",
             "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
@@ -73,9 +46,7 @@
                 "ice",
                 "water"
             ]
-        }
-    ],
-    "belt": [
+        },
         {
             "id": 134,
             "name": "Aquali",
@@ -83,6 +54,35 @@
             "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/134.png",
             "types": [
                 "water"
+            ]
+        }
+    ],
+    "belt": [
+        {
+            "id": 4,
+            "name": "Salamèche",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png",
+            "types": [
+                "fire"
+            ]
+        },
+        {
+            "id": 77,
+            "name": "Ponyta",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/77.png",
+            "types": [
+                "fire"
+            ]
+        },
+        {
+            "id": 25,
+            "name": "Pikachu",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
+            "types": [
+                "electric"
             ]
         }
     ]

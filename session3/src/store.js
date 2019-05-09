@@ -45,6 +45,10 @@ const store = new Vuex.Store({
       state.outside.fight.wild = pokemon;
       state.outside.fight.pokemon = state.belt[0];
     },
+    flee(state) {
+      state.outside.fight.wild = null;
+      state.outside.fight.pokemon = null;
+    },
   },
   getters: {
     isBeltFull(state) {
