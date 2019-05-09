@@ -1,22 +1,6 @@
 {
     "pokemons": [
         {
-            "id": 7,
-            "name": "Carapuce",
-            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
-            "types": [
-                "water"
-            ]
-        },
-        {
-            "id": 25,
-            "name": "Pikachu",
-            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
-            "types": [
-                "electric"
-            ]
-        },
-        {
             "id": 1,
             "name": "Bulbizarre",
             "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
@@ -75,5 +59,22 @@
             ]
         }
     ],
-    "belt": []
+    "belt": [
+        {
+            "id": 7,
+            "name": "Carapuce",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+            "types": [
+                "water"
+            ]
+        },
+        {
+            "id": 25,
+            "name": "Pikachu",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+            "types": [
+                "electric"
+            ]
+        }
+    ]
 }
