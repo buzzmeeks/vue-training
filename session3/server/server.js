@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const JsonDB = require('node-json-db');
+const bodyParser = require('body-parser');
 const { Config } = require('node-json-db/dist/lib/JsonDBConfig');
 const bodyParser = require('body-parser');
 
@@ -17,11 +18,15 @@ app.get('/pokemons', function(req, res) {
 app.post('/pokemons', function(req, res) {
   const pokemon = req.body;
   db.push('/pokemons[]', pokemon, true);
+  res.json({});
 });
 
 app.post('/belt', function(req, res) {
+  console.log('pokemonnn', req);
   const pokemon = req.body;
+  console.log('pokemon', pokemon);
   db.push('/belt[]', pokemon, true);
+  res.json({});
 });
 
 app.post('/pokemons/:id/move', function(req, res) {
