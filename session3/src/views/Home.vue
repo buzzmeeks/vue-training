@@ -7,7 +7,6 @@
 
 <script>
 import axios from 'axios';
-import { pokemons } from '@/assets/data/pokemons';
 import Box from '@/components/Box';
 import Belt from '@/components/Belt';
 
