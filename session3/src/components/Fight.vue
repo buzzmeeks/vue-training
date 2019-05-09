@@ -3,7 +3,10 @@
     <div class="is-captured" v-if="alreadyCaptured">Déjà capturé</div>
     <img class="pokemon-img" :src="pokemonImage">
     <img class="wild-img" :src="wildImage">
-    <button class="flee" @click="flee">Fuir</button>
+    <div class="actions">
+      <button class="capture" v-if="!alreadyCaptured" @click="capture">Capturer</button>
+      <button class="flee" @click="flee">Fuir</button>
+    </div>
   </div>
 </template>
 
@@ -17,7 +20,8 @@ export default {
       return this.$store.state.outside.fight.wild.image;
     },
     alreadyCaptured() {
-      const wildId = this.$store.state.outside.fight.wild.id;
+      const wildId =
+        this.$store.state.outside.fight.wild && this.$store.state.outside.fight.wild.id;
       return (
         this.$store.state.pokemons.findIndex(p => p.id === wildId) > -1 ||
         this.$store.state.belt.findIndex(p => p.id === wildId) > -1
@@ -27,6 +31,9 @@ export default {
   methods: {
     flee() {
       this.$store.commit('flee');
+    },
+    capture() {
+      this.$store.dispatch('capturePokemon');
     },
   },
 };
@@ -48,10 +55,15 @@ export default {
     top: 0;
     right: 0;
   }
-  .flee {
+  .actions {
+    display: flex;
+    :not(:first-child) {
+      margin-left: 10px;
+    }
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
   }
   .is-captured {
     position: absolute;

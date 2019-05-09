@@ -55,6 +55,15 @@
             "types": [
                 "water"
             ]
+        },
+        {
+            "id": 118,
+            "name": "Poissirène",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/118.png",
+            "types": [
+                "water"
+            ]
         }
     ],
     "belt": [
@@ -83,6 +92,35 @@
             "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
             "types": [
                 "electric"
+            ]
+        },
+        {
+            "id": 31,
+            "name": "Nidoqueen",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/31.png",
+            "types": [
+                "ground",
+                "poison"
+            ]
+        },
+        {
+            "id": 95,
+            "name": "Onix",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/95.png",
+            "types": [
+                "ground",
+                "rock"
+            ]
+        },
+        {
+            "id": 11,
+            "name": "Chrysacier",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
+            "imageBack": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/11.png",
+            "types": [
+                "bug"
             ]
         }
     ]

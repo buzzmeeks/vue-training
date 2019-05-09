@@ -71,6 +71,20 @@ const store = new Vuex.Store({
       commit('setBelt', belt);
     },
 
+    async capturePokemon({ dispatch, getters, state, commit }) {
+      const pokemon = state.outside.fight.wild;
+      if (!pokemon) {
+        return;
+      }
+      if (getters.isBeltFull) {
+        await axios.post('/api/pokemons', pokemon);
+      } else {
+        await axios.post('api/belt', pokemon);
+      }
+      commit('flee');
+      await dispatch('getPokemons');
+    },
+
     async putInBelt({ dispatch }, id) {
       await axios.post(`/api/pokemons/${id}/move/`);
       await dispatch('getPokemons');

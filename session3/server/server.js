@@ -3,7 +3,6 @@ const app = express();
 const JsonDB = require('node-json-db');
 const bodyParser = require('body-parser');
 const { Config } = require('node-json-db/dist/lib/JsonDBConfig');
-const bodyParser = require('body-parser');
 
 const db = new JsonDB(new Config('server/data/pokemons.json', true, true, '/'));
 db.reload();
